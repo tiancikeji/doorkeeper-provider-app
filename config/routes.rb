@@ -1,7 +1,7 @@
 DoorkeeperProvider::Application.routes.draw do
   use_doorkeeper
 
-  devise_for :users
+  devise_for :users, :controllers => { :registrations => "devise/registrations" }
 
   namespace :api do
     namespace :v1 do

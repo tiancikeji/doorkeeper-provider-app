@@ -14,7 +14,8 @@ class UsersController < ApplicationController
 
   def create
     @user = User.create!(params[:user])
-    sign_in_and_redirect @user
+    sign_in @user
+    redirect_to  "http://localhost:3001/users/auth/doorkeeper"
   end
 
 end

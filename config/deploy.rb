@@ -48,6 +48,9 @@ namespace :deploy do
   task :seed do
     run "cd  #{current_path} && bundle exec rake RAILS_ENV=#{rails_env} db:seed"
   end
+  task :migrate do
+    run "cd  #{current_path} && bundle exec rake RAILS_ENV=#{rails_env} db:migrate"
+  end
 end
 
 before "deploy:migrate", "bundle:install"

@@ -13,6 +13,8 @@ gem 'redcarpet', '2.0.0b5'
 
 gem 'mysql2', :group => :production
 gem 'capistrano'
+gem 'thin'
+gem "quiet_assets", :group => :development
 
 group :assets do
   gem 'sass-rails',   '~> 3.1.4'
