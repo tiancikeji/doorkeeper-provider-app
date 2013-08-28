@@ -13,6 +13,7 @@ DoorkeeperProvider::Application.routes.draw do
   end
 
   get "/users/sign_up" => "users#new"
+  get "/users" => "users#index"
   post "/user" => "users#create"
 
   root :to => "home#index"

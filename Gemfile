@@ -5,11 +5,14 @@ gem 'jquery-rails'
 gem 'devise'
 gem 'doorkeeper', '0.5.0.rc1'
 gem 'faker'
+gem "therubyracer", ">= 0.10.2", :group => :assets, :platform => :ruby
+
 
 gem 'coderay', '~> 0.9.8'
 gem 'redcarpet', '2.0.0b5'
 
-gem 'pg', :group => :production
+gem 'mysql2', :group => :production
+gem 'capistrano'
 
 group :assets do
   gem 'sass-rails',   '~> 3.1.4'
@@ -18,6 +21,6 @@ group :assets do
 end
 
 group :development, :test do
-  gem 'sqlite3'
+  gem 'mysql2'
   gem 'rspec-rails', '~> 2.8.1'
 end

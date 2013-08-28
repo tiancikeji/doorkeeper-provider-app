@@ -8,6 +8,10 @@ class UsersController < ApplicationController
     end
   end
 
+  def index
+    
+  end
+
   def create
     @user = User.create!(params[:user])
     sign_in_and_redirect @user
